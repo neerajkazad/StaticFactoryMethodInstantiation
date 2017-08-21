@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="meeting" class="com.sfm.beans.Meeting">
+		<property name="agenda" value="Release Plan" />
+		<property name="description" value="Release Plan Meeting" />
+		<property name="participants">
+			<list value-type="java.lang.String">
+				<value>Anil</value>
+				<value>Mayur</value>
+			</list>
+		</property>
+		<property name="meetingDate" ref="mprDate"/>
+	</bean>
+	<bean id="mprDate" class="java.util.Calendar" factory-method="getInstance" />
+
+</beans>
